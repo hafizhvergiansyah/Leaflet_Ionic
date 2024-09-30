@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Leaflet-Ionic</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label>Base Map</ion-label>
+    <ion-select placeholder="Select a base map" (ionChange)="onBaseMapChange($event)">
+      <ion-select-option value="osm">OpenStreetMap</ion-select-option>
+      <ion-select-option value="satellite">Satellite</ion-select-option>
+      <ion-select-option value="dark">Dark</ion-select-option>
+      <ion-select-option value="terrain">Terrain</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Fixed the typo "widht" to "width" -->
+  <div id="mapId" style="height: 100%; width: 100%;">
+  </div>
+</ion-content>
